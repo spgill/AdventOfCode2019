@@ -1,0 +1,22 @@
+{
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
+    "python.formatting.provider": "black",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#009900",
+        "activityBar.activeBorder": "#2020ff",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#2020ff",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "titleBar.activeBackground": "#006600",
+        "titleBar.inactiveBackground": "#00660099",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "statusBar.background": "#006600",
+        "statusBarItem.hoverBackground": "#009900",
+        "statusBar.foreground": "#e7e7e7"
+    },
+    "peacock.color": "#060",
+}
