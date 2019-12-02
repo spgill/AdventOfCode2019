@@ -17,12 +17,10 @@ def main(input_file):
 
         moduleFuelReq = math.floor(mass / 3) - 2
         fuelRequirements.append(moduleFuelReq)
-        print("MODULE", moduleFuelReq)
 
         fuelReqCounter = moduleFuelReq
         while True:
             req = math.floor(fuelReqCounter / 3) - 2
-            print("   ", req)
             if req <= 0:
                 break
             fuelRequirements.append(req)
