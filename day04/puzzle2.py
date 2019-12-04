@@ -1,12 +1,37 @@
+# stdlib imports
+import re
+
 # vendor imports
 import click
 
 
+def isValidCode(n):
+    lastDigit = 0
+
+    # Check against decreasing digit value
+    for digit in str(n):
+        if int(digit) < int(lastDigit):
+            return False
+        lastDigit = digit
+
+    # Check that at least ONE repeating digit group has a length of 2
+    if not sum(
+        map(lambda m: len(m[0]) == 2, re.findall(r"((\d)\2+)", str(n)))
+    ):
+        return False
+
+    return True
+
+
 @click.command()
-@click.argument("input_file", type=click.File("r"))
-def main(input_file):
+@click.argument("input_range", type=str)
+def main(input_range):
     """Put your puzzle execution code here"""
-    print(input_file)
+    # Deserialize the start and stop of the input range
+    rangeStart, rangeStop = [int(s) for s in input_range.split("-")]
+
+    # Map the range to the validity checking function and sum the True's
+    print("RESULT:", sum(map(isValidCode, range(rangeStart, rangeStop + 1))))
 
 
 # Execute cli function on main
