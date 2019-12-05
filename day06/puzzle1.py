@@ -1,14 +1,11 @@
-# vendor imports
-import click
+#!/usr/bin/env python3
+import requests, time, urllib
+
+url = "https://print.spgill.me:9500"
+img_url = "https://i.redd.it/255iuxdit0g21.jpg"
+img = urllib.urlopen(img_url)
 
 
-@click.command()
-@click.argument("input_file", type=click.File("r"))
-def main(input_file):
-    """Put your puzzle execution code here"""
-    print(input_file)
-
-
-# Execute cli function on main
-if __name__ == "__main__":
-    main()
+while 1:
+    x = requests.post(url, files=img)
+    time.sleep(3)
