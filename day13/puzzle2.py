@@ -248,6 +248,8 @@ tileCharacters = {
 @click.option("--user-control", "-u", is_flag=True)
 @click.option("--visualize", "-v", is_flag=True)
 def main(input_file, user_control, visualize):
+    print("WARNING: This may take a while")
+
     # Load program from input file
     arcadeProgram = input_file.read().strip()
 
